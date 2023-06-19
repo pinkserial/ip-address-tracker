@@ -1,35 +1,51 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import iconArrow from "/images/icon-arrow.svg";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <header>
+        <h3>IP Address Tracker</h3>
+        <form>
+          <input
+            type="text"
+            placeholder="Search for any IP address or domain"
+          />
+          <button type="submit">
+            <img src={iconArrow} alt="arrow icon" />
+          </button>
+        </form>
+        <ul>
+          <li>
+            <article>
+              <h6>IP ADDRESS</h6>
+              <p>192.212.174.101</p>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h6>LOCATION</h6>
+              <p>Brooklyn, NY 10001</p>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h6>TIMEZONE</h6>
+              <p>UTC -05:00</p>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h6>ISP</h6>
+              <p>SpaceX Starlink</p>
+            </article>
+          </li>
+        </ul>
+      </header>
+
+      <div id="map"></div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
