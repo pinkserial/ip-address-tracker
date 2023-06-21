@@ -9,7 +9,7 @@ const MapControl = ({ location }: { location: Location }) => {
 
   parentMap.setView(position, 15);
 
-  const icon = L.icon({ iconUrl: "/public/images/icon-location.svg" });
+  const icon = L.icon({ iconUrl: "/public/images/icon-location.svg", iconAnchor: [23, 56]});
 
   return <Marker position={position} icon={icon} />;
 };

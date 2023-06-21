@@ -1,4 +1,4 @@
-import GeoLocation from "../types/geoLocation";
+import { GeoLocation } from "../types/geoLocation";
 
 const baseUrl = "https://geo.ipify.org/api/v2/country,city";
 
@@ -34,17 +34,4 @@ export default async function (
   }
 
   throw Error(`Invalid ipaddress or domain: ${ipAddressOrDomain}`);
-
-  // const response = {
-  //   ip: "116.127.242.37",
-  //   location: {
-  //     city: "Seoul",
-  //     region: "Seoul",
-  //     timezone: "+09:00",
-  //     lat: 37.566,
-  //     lng: 126.9784,
-  //   },
-  //   isp: "SK Broadband Co Ltd",
-  // };
-  // return response;
 }

@@ -4,7 +4,7 @@ import { Location } from "../types/geoLocation";
 
 const Map = ({ location }: { location: Location }) => {
   return (
-    <MapContainer className="map" scrollWheelZoom={false}>
+    <MapContainer className="map" zoomControl={false}>
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

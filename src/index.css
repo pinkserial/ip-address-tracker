@@ -12,7 +12,6 @@
   --border-radius: 15px;
 }
 
-
 *,
 *::before,
 *::after {
@@ -85,6 +84,5 @@ input {
 }
 
 p {
-  word-break: break-word;
   margin: 0;
 }

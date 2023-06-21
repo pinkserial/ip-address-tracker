@@ -18,25 +18,36 @@ header h3 {
 header form {
   display: flex;
   width: 40%;
+  min-width: 500px;
   margin: 0 auto;
+  justify-content: center;
   margin-bottom: 45px;
 }
 
 header form input {
+  flex: 1;
+  width: 100%;
   padding: 18px 20px;
   border-top-left-radius: var(--border-radius);
   border-bottom-left-radius: var(--border-radius);
-  flex: 10;
   border: none;
+  outline: none;
   color: var(--color-secondary);
+  cursor: pointer;
 }
 
 header form button {
-  flex: 1;
+  min-width: 65px;
   background-color: black;
   border-top-right-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
   border: none;
+  cursor: pointer;
+}
+
+header form button:hover {
+  background-color: var(--color-secondary);
+  opacity: 0.9;
 }
 
 header form button img {
@@ -53,15 +64,23 @@ header ul {
 
 header ul li {
   color: var(--color-primary);
-  margin: 35px;
-  margin-right: 0px;
-  padding-right: 35px;
-  flex: 1;
-  border-right: 1px solid var(--color-secondary);
+  padding: 35px;
+  width: 25%;
+  position: relative;
+  overflow-wrap: break-word;
 }
 
-header ul li:last-child {
-  border: none;
+header ul li::after {
+  content: "";
+  border-left: 1px solid var(--color-secondary);
+  position: absolute;
+  height: 50%;
+  right: 0;
+  top: 25%;
+}
+
+header ul li:last-child::after {
+  display: none;
 }
 
 header ul li article h6 {
@@ -74,10 +93,72 @@ header ul li article p {
   font-weight: 500;
   font-size: 1.5rem;
   margin: 15px 0;
+  overflow-wrap: break-word;
 }
 
 .map {
   position: relative;
   z-index: -1;
   height: calc(100vh - 280px);
+}
+
+@media (max-width: 768px) {
+  header form {
+    width: 80%;
+  }
+
+  header ul li {
+    border: none;
+    padding: 15px;
+  }
+
+  header ul li article h6 {
+    font-size: 0.6rem;
+  }
+
+  header ul li article p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 425px) {
+  header {
+    background-image: url("/images/pattern-bg-mobile.png");
+  }
+
+  header h3 {
+    font-size: 1.6rem;
+  }
+
+  header form {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
+
+  header ul {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  header ul li {
+    width: auto;
+    border: none;
+    padding: 10px;
+  }
+
+  header ul li::after {
+    display: none;
+  }
+
+  header ul li article h6 {
+    font-size: 0.6rem;
+  }
+
+  header ul li article p {
+    font-size: 1.3rem;
+    margin: 5px 0;
+  }
 }
