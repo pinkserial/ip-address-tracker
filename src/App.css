@@ -105,6 +105,7 @@ header ul li article p {
 @media (max-width: 768px) {
   header form {
     width: 80%;
+    min-width: 0;
   }
 
   header ul li {
@@ -133,7 +134,12 @@ header ul li article p {
 
   header form {
     width: 100%;
+    min-width: 0;
     margin-bottom: 20px;
+    font-size: 1rem;
+  }
+
+  header form input {
     font-size: 1rem;
   }
 
@@ -154,11 +160,11 @@ header ul li article p {
   }
 
   header ul li article h6 {
-    font-size: 0.6rem;
+    font-size: 0.5rem;
   }
 
   header ul li article p {
-    font-size: 1.3rem;
+    font-size: 1rem;
     margin: 5px 0;
   }
 }
