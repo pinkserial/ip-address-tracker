@@ -1,11 +1,13 @@
-export default interface GeoLocation {
+export interface GeoLocation {
   ip: string;
-  location: {
-    region: string;
-    lat: number;
-    lng: number;
-    city: string;
-    timezone: string;
-  };
+  location: Location;
   isp: string;
+}
+
+export interface Location {
+  region: string;
+  lat: number;
+  lng: number;
+  city: string;
+  timezone: string;
 }
