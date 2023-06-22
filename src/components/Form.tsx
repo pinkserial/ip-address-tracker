@@ -1,5 +1,5 @@
 import fetchGeoLocation from "../api/fetchGeoLocation";
-import GeoLocation from "../types/geoLocation";
+import { GeoLocation } from "../types/geoLocation";
 import iconArrow from "/images/icon-arrow.svg";
 
 const Form = ({
